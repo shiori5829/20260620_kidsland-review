@@ -1,18 +1,24 @@
 @use 'sass:math';
 
 // インナー幅
-$innerWidth: 1024px;
+$innerWidth: 1080px;
 
 // 余白
 $padding-pc: 25px;
 $padding-sp: 20px;
 
 // フォント
-$font-main: "";
+$font-main: "Kosugi Maru", sans-serif;
+$font-title: "Yusei Magic", sans-serif;
+$font-en: "Jost", sans-serif;
 
 // 色指定
 $black: #333;
 $white: #fff;
+$accent: #EF8F9C;        // 花・アクセント
+$base: #FFEDF0;   // 背景
+$yellow: #FFF7B8;      // footer等
+$main: #55000C;
 
 // ブレイクポイント
 $breakpoints: (

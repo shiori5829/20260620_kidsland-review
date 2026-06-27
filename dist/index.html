@@ -17,6 +17,10 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="icon" href="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Kosugi+Maru&family=Yusei+Magic&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
@@ -24,8 +28,184 @@
   <script defer src="./js/script.js"></script>
 </head>
 <body>
-  <div class="l-inner">
-    <p class="p-test">cocomateだよ\(^o^)/</p>
+
+  <header class="l-header">
+    <!-- 背景画像 -->
+    <picture class="l-header__bg">
+      <source media="(min-width: 768px)" srcset="./images/common/header.svg">
+      <img src="./images/common/header-sp.svg" alt="" aria-hidden="true">
+    </picture>
+    <!-- PC -->
+    <div class="l-header__pc">
+      <div class="l-header__inner">
+        <nav class="l-header__nav l-header__nav--left">
+          <ul class="l-header__nav-items">
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-hana.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">わたしたちのこと</span>
+                  <span class="l-header__nav-en">About</span>
+                </div>
+              </a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-tree.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">各園のご紹介</span>
+                  <span class="l-header__nav-en">Introduction</span>
+                </div>
+              </a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-letter.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">こもれびだより</span>
+                  <span class="l-header__nav-en">Letter</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <h1 class="l-header__logo">
+          <a href="/">
+            <img src="./images/common/logo.svg" alt="桜のこもれびキッズランド">
+          </a>
+        </h1>
+
+        <nav class="l-header__nav l-header__nav--right">
+          <ul class="l-header__nav-items">
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-bell2.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">お知らせ</span>
+                  <span class="l-header__nav-en">Info</span>
+                </div>
+              </a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-pen.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">採用情報</span>
+                  <span class="l-header__nav-en">Recruit</span>
+                </div>
+              </a>
+            </li>
+            <li class="l-header__nav-item">
+              <a href="/">
+                <img src="./images/common/icon-mail.svg" alt="">
+                <div class="l-header__nav-text">
+                  <span class="l-header__nav-ja">お問い合わせ</span>
+                  <span class="l-header__nav-en">Contact</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- SP -->
+    <div class="l-header__sp">
+      <div class="l-header__inner">
+        <h1 class="l-header__sp-logo">
+          <a href="/">
+            <img src="./images/common/logo.svg" alt="桜のこもれびキッズランド">
+          </a>
+        </h1>
+        <button class="l-header__button" type="button">
+          <img class="is-menu" src="./images/common/sp-menu-btn.svg" alt="メニュー">
+          <img class="is-close" src="./images/common/sp-close-btn.svg" alt="メニューを閉じる">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ドロワー -->
+  <div class="p-drawer">
+    <div class="p-drawer__inner">
+      <nav class="p-drawer__nav">
+        <ul class="p-drawer__items">
+          <!-- メニュー -->
+           <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-hana.svg" alt="">
+              <span class="p-drawer__ja">わたしたちのこと</span>
+              <span class="p-drawer__en">About</span>
+            </a>
+          </li>
+          <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-tree.svg" alt="">
+              <span class="p-drawer__ja">各園のご紹介</span>
+              <span class="p-drawer__en">Introduction</span>
+            </a>
+          </li>
+          <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-letter.svg" alt="">
+              <span class="p-drawer__ja">こもれびだより</span>
+              <span class="p-drawer__en">Letter</span>
+            </a>
+          </li>
+          <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-bell2.svg" alt="">
+              <span class="p-drawer__ja">お知らせ</span>
+              <span class="p-drawer__en">Info</span>
+            </a>
+          </li>
+          <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-pen.svg" alt="">
+              <span class="p-drawer__ja">採用情報</span>
+              <span class="p-drawer__en">Recruit</span>
+            </a>
+          </li>
+          <li class="p-drawer__item">
+            <a href="/" class="p-drawer__link">
+              <img src="./images/common/icon-mail.svg" alt="">
+              <span class="p-drawer__ja">お問い合わせ</span>
+              <span class="p-drawer__en">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
+
+  <main>
+    <div class="l-inner">
+
+      <section class="p-fv">
+
+      </section>
+
+      <section class="p-welcome">
+
+      </section>
+
+      <section class="p-introduction">
+
+      </section>
+
+      <section class="p-letter"></section>
+
+      <section class="p-recruit"></section>
+    </div>
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-inner">
+      <div class="l-footer__inner">
+        <p class="l-footer__text"></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

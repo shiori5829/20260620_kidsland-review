@@ -27,7 +27,18 @@ html {
 // フォント、カラー設定
 body {
   font-family: $font-main;
-  color: $black;
+  color: $main;
+
+  // SP
+  background-image: url(../images/common/bg-sp.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+
+  // PC
+  @include mq(md) {
+    background-image: url(../images/common/bg.png);
+  }
 }
 
 // ホバー

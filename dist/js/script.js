@@ -1,6 +1,6 @@
 
 jQuery(function ($) {
-  
+
   // ページトップボタン
   var topBtn = $('.js-pagetop');
   topBtn.hide();
@@ -33,6 +33,45 @@ jQuery(function ($) {
     let targetY = target.offset().top - header;
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
     return false;
+  });
+
+  // ==========================
+  // ドロワー
+  // ==========================
+
+  // 開閉
+  $('.l-header__button').on('click', function () {
+    $(this).toggleClass('is-open');
+    $('.p-drawer').toggleClass('is-open');
+    $('body').toggleClass('is-fixed');
+  });
+
+  // メニュークリックで閉じる
+  $('.p-drawer__link').on('click', function () {
+    $('.p-drawer').removeClass('is-open');
+    $('.l-header__button').removeClass('is-open');
+    $('body').removeClass('is-fixed');
+  });
+
+  // 背景クリックで閉じる
+  $('.p-drawer').on('click', function () {
+    $('.p-drawer').removeClass('is-open');
+    $('.l-header__button').removeClass('is-open');
+    $('body').removeClass('is-fixed');
+  });
+
+  // 白いボックス内は閉じない
+  $('.p-drawer__inner').on('click', function (e) {
+    e.stopPropagation();
+  });
+
+  // Escキーで閉じる
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      $('.p-drawer').removeClass('is-open');
+      $('.l-header__button').removeClass('is-open');
+      $('body').removeClass('is-fixed');
+    }
   });
 
 });
