@@ -74,4 +74,16 @@ jQuery(function ($) {
     }
   });
 
+
+  // FVアニメーション
+$(window).on('load', function () {
+
+  $('.p-fv__copy').addClass('is-show');
+
+  setTimeout(function () {
+    $('.p-fv__news').addClass('is-show');
+  }, 300);
+
+});
+
 });

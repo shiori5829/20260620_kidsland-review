@@ -2,6 +2,7 @@
 
 .l-header {
   position: relative;
+  z-index: 10;
 }
 
 .l-header__bg {
@@ -45,11 +46,8 @@
   @include mq(md) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: myrem(1280);
-    height: myrem(120);
-    margin-inline: auto;
+    justify-content: center;
+    gap: myrem(20);
   }
 }
 
@@ -91,7 +89,7 @@
 .l-header__nav-item {
   position: relative;
   @include mq(md) {
-    width: myrem(140);
+    width: myrem(155);
   }
 }
 
